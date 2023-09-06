@@ -1,1 +1,1 @@
-#Yulduzlar jangi
+<b>Yulduzlar jangi</b>
