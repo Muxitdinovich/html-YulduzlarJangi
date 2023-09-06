@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="1.ico" type="img/x-icon" />
+    <title>Yulduzlar jangi</title>
+</head>
+
+<body>
+    <!-- Game -->
+    <div id="app">
+        <div id="logo">
+            <img src="./img/logo-01.png" alt="logo">
+        </div>
+        <div id="container" class="absolute">
+            <div id="start" class="column">
+                <p class="message pre">
+                    1. Kosmik kemani boshqarish uchun W, A, S, D tugmalaridan foydalaning.
+                    2  Tab tugmasi o'q otish uchun.
+                    3. Yoqilg'i qiymati 0 bo'lsa, o'yin tugaydi. 
+                    4. Maksimal 30 ballgacha oshirishi mumkin.
+                    5. O'yinni to'xtatib turish uchun P, ovozni o'chirish uchun M tugmasini bosing.
+                    Yulduzlar urushi hoziroq boshlang!
+                </p>
+                <button id="start-btn" class="btn">
+                    <p>o'yinni boshlash</p>
+                    <p>Yuklanmoqda...</p>
+                </button>
+            </div>
+            <div id="play" class="absolute">
+                <canvas id="canvas" class="absolute"></canvas>
+                <div class="content absolute">
+                    <div class="header">
+                        <ul class="info">
+                            <li>
+                                <img src="./img/time3.png" alt="time">
+                                <span id="time">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/fuel2.png" alt="fuel">
+                                <span id="fuel">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/score.png" alt="score">
+                                <span id="score">00</span>
+                            </li>
+                            <li>
+                                <img src="./img/playerBullet.png" alt="score">
+                                <span id="shoot">00</span>
+                            </li>
+
+                        </ul>
+                        <ul class="option">
+                            <li id="game-font-size-add">
+                                <img class="pause" src="./img/a+.png" alt="time">
+                            </li>
+                            <li id="game-font-size-reduce">
+                                <img class="pause" src="./img/a-.png" alt="time">
+                            </li>
+                            <li id="game-mute-btn">
+                                <img class="pause" src="./img/mute.png" alt="time">
+                                <img class="pause" src="./img/speaker.png" alt="time">
+                            </li>
+                            <li id="game-pause-btn">
+                                <img class="pause" src="./img/play.png" alt="time">
+                                <img class="pause" src="./img/pause.png" alt="time">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="over" class="column absolute">
+                <div class="game-data">
+                    <p class="message">
+                        <span>
+                            <img src="./img/time3.png" alt="time">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="time">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/score.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="score">00</span>
+                    </p>
+                    <p class="message">
+                        <span>
+                            <img src="./img/playerBullet.png" alt="score">
+                        </span>
+                        <span>
+                            --
+                        </span>
+                        <span class="shoot">00</span>
+                    </p>
+                </div>
+                <input type="text" id="name" placeholder="Ismingizni kiriting" />
+                <button id="submit-btn" class="btn" disabled>
+                    O'yinni davom ettiring
+                </button>
+            </div>
+            <div id="rank" class="column absolute">
+                <table class="scroll">
+                    <thead>
+                        <tr>
+                            <th>reyting</th>
+                            <th>Nomi</th>
+                            <th>Fraksiya</th>
+                            <th>Soniyalar soni</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <button id="restart-btn" class="btn">
+                    boshlash uchun qaytib
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>Crafted with by
+            <a href="http://4ark.me"> @4Ark</a>/<a href="https://github.com/gd4Ark/star-battle">GitHub</a>
+        </span>
+    </footer>
+    <script src="js/config/config.js"></script>
+    <script src="js/utils/utils.js"></script>
+    <script src="js/utils/res.js"></script>
+    <script src="js/class/scene.js"></script>
+    <script src="js/class/cooldown.js"></script>
+    <script src="js/class/element.js"></script>
+    <script src="js/class/animation.js"></script>
+    <script src="js/class/plane.js"></script>
+    <script src="js/class/bullet.js"></script>
+    <script src="js/class/player.js"></script>
+    <script src="js/class/enemy.js"></script>
+    <script src="js/class/meteorite.js"></script>
+    <script src="js/class/friend.js"></script>
+    <script src="js/class/star.js"></script>
+    <script src="js/class/fuel.js"></script>
+    <script src="js/scenes/start.js"></script>
+    <script src="js/scenes/play.js"></script>
+    <script src="js/scenes/over.js"></script>
+    <script src="js/scenes/rank.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
